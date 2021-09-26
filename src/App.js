@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Container from "react-bootstrap/esm/Container";
 
 class App extends Component
 {
@@ -9,8 +10,7 @@ class App extends Component
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Timers</h1>
         </header>
         <TimerContainer />
       </div>
@@ -22,9 +22,9 @@ function TimerContainer()
 {
 
   return (
-    <p className="App-intro">
+    <Container className="timer-container">
       {Date.now()}
-    </p>
+    </Container>
   )
 }
 export default App;
