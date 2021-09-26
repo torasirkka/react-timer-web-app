@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Container from "react-bootstrap/esm/Container";
 
@@ -27,4 +26,6 @@ function TimerContainer()
     </Container>
   )
 }
+
+
 export default App;
