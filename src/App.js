@@ -22,8 +22,17 @@ class App extends Component
 function TimerContainer()
 {
   let timer_list = [
-    { name: 'timer1', start_timestamp: 1632693980300 / 1000, duration_seconds: 10000 }
+    { name: 'timer1', start_timestamp: 1632693980366 / 1000, duration_seconds: 10000 }
   ];
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() =>
+  {
+    const interval = setInterval(() =>
+    {
+      setSeconds(seconds => seconds + 1)
+    }, 1000);
+  }, []);
 
   return (
     <Container className="timer-container">
