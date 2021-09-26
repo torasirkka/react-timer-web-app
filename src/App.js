@@ -9,12 +9,12 @@ class App extends Component
   render()
   {
     return (
-      <div className="App">
+      <Container className="App">
         <header className="App-header">
           <h1 className="App-title">Timers</h1>
         </header>
         <TimerContainer />
-      </div>
+      </Container>
     );
   }
 }
@@ -24,15 +24,16 @@ function TimerContainer()
   let timer_list = [
     { name: 'timer1', start_timestamp: 1632693980366 / 1000, duration_seconds: 10000 }
   ];
-  const [seconds, setSeconds] = useState(0);
+  const [curTime, setCurTime] = useState(Date.now());
 
   useEffect(() =>
   {
-    const interval = setInterval(() =>
+    setInterval(() =>
     {
-      setSeconds(seconds => seconds + 1)
+      setCurTime(curTime => Date.now())
     }, 1000);
-  }, []);
+  }, []
+  );
 
   return (
     <Container className="timer-container">
