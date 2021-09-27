@@ -29,6 +29,7 @@ If you did not use the starter code, please also include instructions on how to 
 ### Installation:
 You need npm for this project. 
 ```
+git clone https://github.com/torasirkka/react-timer-web-app.git
 cd react-timer-web-app
 npm install
 npm start
